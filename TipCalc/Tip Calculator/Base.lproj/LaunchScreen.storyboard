@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="n1x-cU-TBF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.2009178251" green="0.21485163269999999" blue="0.27461636070000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TIP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqX-eL-msF">
+                                <rect key="frame" x="116" y="179" width="89" height="65"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="43"/>
+                                <color key="textColor" red="0.99993377923965454" green="1" blue="0.99988192319869995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CALCULATOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9q-uy-9wF">
+                                <rect key="frame" x="-37" y="229" width="394" height="68"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="33"/>
+                                <color key="textColor" red="0.99993377923965454" green="1" blue="0.99988192319869995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="KqX-eL-msF" secondAttribute="trailing" constant="99" id="Dx2-95-K1F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t9q-uy-9wF" secondAttribute="trailing" constant="15" id="F9w-Mc-JrB"/>
+                            <constraint firstItem="n1x-cU-TBF" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="K6a-bd-Lda"/>
+                            <constraint firstItem="KqX-eL-msF" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="105" id="OoV-kU-bL4"/>
+                            <constraint firstAttribute="trailing" secondItem="n1x-cU-TBF" secondAttribute="trailing" id="ddL-DM-NAo"/>
+                            <constraint firstItem="t9q-uy-9wF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="15" id="dhX-gV-uAS"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="n1x-cU-TBF" secondAttribute="bottom" id="dzg-kH-S1E"/>
+                            <constraint firstItem="t9q-uy-9wF" firstAttribute="top" secondItem="KqX-eL-msF" secondAttribute="bottom" constant="16" id="g8o-MP-NLu"/>
+                            <constraint firstItem="KqX-eL-msF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="100" id="mFK-FM-Xct"/>
+                            <constraint firstItem="n1x-cU-TBF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="uoK-WG-AZt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50.625" y="373.94366197183098"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1440" height="2512"/>
+    </resources>
+</document>
