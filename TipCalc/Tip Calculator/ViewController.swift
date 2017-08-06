@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import CoreData
 
 
 extension String {
@@ -69,7 +70,10 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
     var myBillDouble = 0.0
     var isBillWholeNumber = false
     
+    let formatter = DateFormatter()
+
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -187,9 +191,6 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
     @IBAction func Numbers(_ sender: UIButton) {
        var timeToStop = false
        
-        
-       
-        
         //Cheking if number has two numbers after dot
         if BillLabel.currentTitle!.characters.count > 2 && BillLabel.currentTitle![BillLabel.currentTitle!.characters.count - 3] == "." {
             
@@ -274,9 +275,55 @@ class ViewController: UIViewController, SettingsViewControllerDelegate {
         BillLabel.titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
-    //Pay btn
+    //Save transaction + Date
     @IBAction func PayTheBill(_ sender: Any) {
         
+        let alert = UIAlertController(title: "Save Transaction",
+                                      message: "Enter final amount",
+                                      preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: "Save",
+                                               style: .default) {
+                            [unowned self] action in
+            guard let textField = alert.textFields?.first,
+                let amountToSave = textField.text else {
+                    return
+            }
+            // MARK: - Add timestamp
+            let timeStmp = Date()
+            self.formatter.dateFormat = "MM.dd.yyyy' 'HH:mm"
+            self.save(name: amountToSave + " \(self.currency) - \(self.formatter.string(from: timeStmp))")
+
+        }
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .default)
+        alert.addTextField()
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+    }
+    
+    //Save data
+    func save(name: String) {
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+
+        let entity =
+            NSEntityDescription.entity(forEntityName: "Records",
+                                       in: managedContext)!
+        let sum = NSManagedObject(entity: entity,
+                                     insertInto: managedContext)
+        sum.setValue(name, forKeyPath: "name")
+
+        do {
+            try managedContext.save()
+            records.append(sum)
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
     
     
