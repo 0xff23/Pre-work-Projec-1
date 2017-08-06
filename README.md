@@ -21,8 +21,9 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [X] Round bill - option was added on the Settings Screen
+- [X] Round bill - option was added on the Settings View
 - [X] Number of people to split the bill and tips
+- [X] Currency picker was added on the Settings View
 
 ## Video Walkthrough
 
