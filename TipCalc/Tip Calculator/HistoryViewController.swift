@@ -18,12 +18,17 @@ class  HistoryViewController: UIViewController {
     
     
     @IBOutlet weak var tableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
             title = "Transactions"
             tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+            let rect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: 100, height: 100))
+            tableView.tableFooterView = UIView(frame: rect)
+        
+        
     }
     
     // MARK: - Fetch Data 
@@ -96,9 +101,14 @@ extension HistoryViewController: UITableViewDataSource {
                    cellForRowAt indexPath: IndexPath)
         -> UITableViewCell {
             let person = records[indexPath.row]
+            
             let cell =
                 tableView.dequeueReusableCell(withIdentifier: "Cell",
                                               for: indexPath)
+            cell.textLabel?.font = UIFont(name: "Avenir", size: 16)
+            cell.textLabel?.textColor = UIColor.red // set to any colour
+            cell.layer.backgroundColor = UIColor.clear.cgColor
+            cell.contentView.backgroundColor = UIColor.clear
             cell.textLabel?.text =
                 person.value(forKeyPath: "name") as? String
             return cell }

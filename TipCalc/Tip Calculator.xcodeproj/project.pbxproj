@@ -61,13 +61,13 @@
 			isa = PBXGroup;
 			children = (
 				9DE558541F36E6F200C5F9E3 /* HistoryViewController.swift */,
-				9DE558551F36E6F200C5F9E3 /* hlist.xcdatamodeld */,
 				55B35FDC1EA2C4CD0034C8C4 /* AppDelegate.swift */,
 				55B35FDE1EA2C4CD0034C8C4 /* ViewController.swift */,
 				55D5E05B1EAEC4C10061B85D /* SettingsViewController.swift */,
 				55B35FE31EA2C4CD0034C8C4 /* Assets.xcassets */,
 				55B35FEE1EA4FC590034C8C4 /* Main.storyboard */,
 				55B35FE51EA2C4CE0034C8C4 /* LaunchScreen.storyboard */,
+				9DE558551F36E6F200C5F9E3 /* hlist.xcdatamodeld */,
 				55B35FE81EA2C4CE0034C8C4 /* Info.plist */,
 			);
 			path = "Tip Calculator";

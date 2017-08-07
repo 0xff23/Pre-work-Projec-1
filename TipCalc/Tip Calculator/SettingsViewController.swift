@@ -21,7 +21,7 @@ class SettingsViewControler: UIViewController, UIPickerViewDataSource, UIPickerV
     var pickerDataSource = ["$", "€", "¥", "£", "Fr", "¥", "kr", "₩", "₺", "₽", "₹", "R$",  "R"];
     var myCurentcy = "$"
     var isRoundBill = false
-    var defaultAmmount = 0.0
+    var defaultAmmount = 0.18
     
     //Outlets
     @IBOutlet weak var pickerView: UIPickerView!
