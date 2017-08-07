@@ -4,7 +4,7 @@
 
 Submitted by: **Kirill**
 
-Time spent: **12** hours spent in total
+Time spent: **14** hours spent in total
 
 ## User Stories
 
@@ -21,15 +21,20 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
+- [X] User now can save bills, and view/delete it later. (implemented using Core Data)
+- [X] Some UI improvments (new VC added/History btn added/ Save bill btn added)
 - [X] Round bill - option was added on the Settings View
 - [X] Number of people to split the bill and tips
 - [X] Currency picker was added on the Settings View
 
-## Video Walkthrough
+## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
 <img src='http://imgur.com/j5htpmj.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+## Video Walkthrough - 2 (Updated v1.1)
+<img src='http://imgur.com/a/3Bej2' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
